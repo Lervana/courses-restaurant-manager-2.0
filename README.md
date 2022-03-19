@@ -26,3 +26,5 @@ _**Base app that should be extended by requirements! All instructions are writte
 | Step | Content               | File                                                        |
 | ---- | --------------------- | ----------------------------------------------------------- |
 | 00   | Prerequisites         | [00-prerequisites.md](tutorials/00-prerequisites.md)        |
+| 01   | Creating base app     | [01-creating-new-app.md](tutorials/01-creating-base-app.md) |
+
