@@ -11,7 +11,7 @@ Instruction:
    npm i -D typescript ts-node
    ```
 
-2. Rename ```src/index.js``` to ```src/index.ts```:
+2. Rename _src/index.js_ to _src/index.ts_:
    ```shell
    mv src/index.js src/index.ts
    ```
@@ -21,12 +21,12 @@ Instruction:
    npm install -g npx
    ```
 
-4. Create own TypeScript configuration. This will generate default TypeScript config inside ```tsconfig.json``` file.
+4. Create own TypeScript configuration. This will generate default TypeScript config inside _tsconfig.json_ file.
    ```shell
    npx tsc --init
    ```
 
-5. Change content of default ```tsconfig.json``` to:
+5. Change content of default _tsconfig.json_ to:
    ```json
    {
       "compilerOptions": {
@@ -47,7 +47,7 @@ Instruction:
    }
    ```
 
-6. Change scripts in ```package.json```:
+6. Change scripts in _package.json_:
    ```shell
    npm set-script start "npx node build/index.js"
    npm set-script build "npx tsc -p tsconfig.json"
@@ -79,7 +79,7 @@ To include TypeScript in this application, follow these steps:
 2. Rename *src/index.js* to *src/index.ts*: ```mv src/index.js src/index.ts```
 3. Install *npx*: ```npm install -g npx```
 4. Create TypeScript configuration: ```npx tsc --init```
-5. Adjust content of default ```tsconfig.json```.
+5. Adjust content of default _tsconfig.json_.
 6. Change *start* script in *package.json*: ```npm set-script start "npx node build/index.js"```
 7. Change *build* script in *package.json*: ```npm set-script build "npx tsc -p tsconfig.json"```
 8. Change *dev* script in *package.json*: ```npm set-script dev "npx ts-node src/index.ts"```

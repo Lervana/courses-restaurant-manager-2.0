@@ -24,24 +24,24 @@ To create a new application, follow these steps:
     }
     ```
 
-2. Add ```index.js``` file inside ```src``` directory:
+2. Add _index.js_ file inside _src_ directory:
    ```shell
       mkdir src
       touch src/index.js
    ```
 
-3. Add ```console.log``` into the ```index.js``` file:
+3. Add _console.log_ into the _index.js_ file:
    ```js index.js
    console.log('Hello World!');
    ```
 
-4. Run command: ```npm set-script dev "node src/index.js"``` it will add *dev* script into package.json
+4. Run command: ```npm set-script dev "node src/index.js"``` it will add _dev_ script into package.json
 
 5. Now you can run app by typing: ```npm run dev```
 
-6. Add *.gitignore* file: ```touch .gitignore```
+6. Add _.gitignore_ file: ```touch .gitignore```
 
-7. Add excluded files to *.gitignore.* to not push them into the repo:
+7. Add excluded files to _.gitignore._ to not push them into the repo:
    ```text .gitignore
    /node_modules
    ```
@@ -51,9 +51,9 @@ To create a new application, follow these steps:
 To create a new application, follow these steps:
 
 1. Type `npm init` and type requested fields (name, description etc.).
-2. Add ```index.js``` file inside ```src``` directory.
-3. Add ```console.log``` into the ```index.js``` file.
-4. Add ```run``` script inside ```package.json```.
+2. Add _index.js_ file inside _src_ directory.
+3. Add ```console.log``` into the _index.js_ file.
+4. Add ```run``` script inside _package.json_.
 5. Type ```npm run dev``` in the terminal.
-6. Add *.gitignore* file: ```touch .gitignore```.
-7. Add excluded files to *.gitignore.* to not push them into the repo.
+6. Add _.gitignore_ file: ```touch .gitignore```.
+7. Add excluded files to _.gitignore._ to not push them into the repo.
