@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx ts-node src/index.ts",
+    "dev": "npx nodemon src/index.ts",
     "start": "npx node build/index.js",
-    "build": "npx tsc -p tsconfig.json"
+    "build": "npx tsc -p tsconfig.json",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,19 @@
   },
   "homepage": "https://github.com/Lervana/courses-restaurant-manager-2.0#readme",
   "devDependencies": {
+    "@eslint/create-config": "^0.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
+  },
+  "lint-staged": {
+    "src/**/*": ["eslint --fix", "prettier --write --ignore-unknown"]
   }
 }
