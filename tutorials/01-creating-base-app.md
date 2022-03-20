@@ -2,7 +2,7 @@
 
 To create a new application, follow these steps:
 1. Type `npm init` and type requested fields (name, description etc.). As a result you should see this content of package.json:
-    ```json
+    ```json package.json
     {
       "name": "courses-restaurant-manager-2.0",
       "version": "1.0.0",
@@ -39,6 +39,13 @@ To create a new application, follow these steps:
 
 5. Now you can run app by typing: ```npm run dev```
 
+6. Add *.gitignore* file: ```touch .gitignore```
+
+7. Add excluded files to *.gitignore.* to not push them into the repo:
+   ```text .gitignore
+   /node_modules
+   ```
+
 ## Shortcut
 
 To create a new application, follow these steps:
@@ -48,3 +55,5 @@ To create a new application, follow these steps:
 3. Add ```console.log``` into the ```index.js``` file.
 4. Add ```run``` script inside ```package.json```.
 5. Type ```npm run dev``` in the terminal.
+6. Add *.gitignore* file: ```touch .gitignore```.
+7. Add excluded files to *.gitignore.* to not push them into the repo.
