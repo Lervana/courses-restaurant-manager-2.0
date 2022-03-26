@@ -27,6 +27,8 @@ _**Base app that should be extended by requirements! All instructions are writte
 | ---- | --------------------- | ----------------------------------------------------------- |
 | 00   | Prerequisites         | [00-prerequisites.md](tutorials/00-prerequisites.md)        |
 | 01   | Creating base app     | [01-creating-new-app.md](tutorials/01-creating-base-app.md) |
-| 02   | Add TypeScript        | [02-typescript.md](tutorials/02-typescript.md) |
+| 02   | Add TypeScript        | [02-typescript.md](tutorials/02-typescript.md)              |
 | 03   | Dev environment       | [03-dev-environment.md](tutorials/03-dev-environment.md)    |
+| 04   | Config and logger     | [04-logger.md](tutorials/04-logger.md)                      |
+| 05   | Server                | [05-logger.md](tutorials/05-server.md)                      |
 
