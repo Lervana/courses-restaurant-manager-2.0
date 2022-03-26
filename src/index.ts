@@ -1,1 +1,3 @@
-console.log('Hello World!');
+import { logger } from 'src/logger'
+
+logger.info('Hello info!')
