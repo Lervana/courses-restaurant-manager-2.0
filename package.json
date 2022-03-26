@@ -4,10 +4,10 @@
   "description": "Demo application for managing orders in a restaurant. Application written in TypeScript (Node.js).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon src/index.ts",
-    "start": "npx node build/index.js",
-    "build": "npx tsc -p tsconfig.json",
+    "test": "cross-env NODE_ENV=test",
+    "dev": "cross-env NODE_ENV=development npx nodemon -r tsconfig-paths/register src/index.ts",
+    "start": "cross-env NODE_ENV=production npx node build/index.js",
+    "build": "tsc-alias -p tsconfig.json",
     "prepare": "husky install"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Lervana/courses-restaurant-manager-2.0#readme",
   "devDependencies": {
     "@eslint/create-config": "^0.1.2",
+    "@types/lodash": "^4.14.180",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
     "@typescript-eslint/parser": "^5.15.0",
     "eslint": "^8.11.0",
@@ -31,9 +32,22 @@
     "nodemon": "^2.0.15",
     "prettier": "^2.6.0",
     "ts-node": "^10.7.0",
+    "tsc": "^2.0.4",
+    "tsc-alias": "^1.6.5",
+    "tsconfig-paths": "^3.14.1",
     "typescript": "^4.6.2"
   },
   "lint-staged": {
-    "src/**/*": ["eslint --fix", "prettier --write --ignore-unknown"]
+    "src/**/*": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "lodash": "^4.17.21",
+    "winston": "^3.6.0",
+    "winston-daily-rotate-file": "^4.6.1"
   }
 }
