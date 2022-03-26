@@ -1,3 +1,5 @@
+import { CorsOptions } from 'cors'
+
 export type TEnv = 'production' | 'test' | 'development'
 
 export type TLogLevel =
@@ -18,5 +20,6 @@ export type TConfig = {
         port: number
         logLevel: TLogLevel
         silentLogs: boolean
+        cors: CorsOptions
     }
 }
