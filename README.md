@@ -30,5 +30,6 @@ _**Base app that should be extended by requirements! All instructions are writte
 | 02   | Add TypeScript        | [02-typescript.md](tutorials/02-typescript.md)              |
 | 03   | Dev environment       | [03-dev-environment.md](tutorials/03-dev-environment.md)    |
 | 04   | Config and logger     | [04-logger.md](tutorials/04-logger.md)                      |
-| 05   | Server                | [05-logger.md](tutorials/05-server.md)                      |
+| 05   | Server                | [05-server.md](tutorials/05-server.md)                      |
+| 07   | Base routes           | [06-routes.md](tutorials/06-server.md)                      |
 
