@@ -1,29 +1,55 @@
 import { Router, Request, Response } from 'express'
+import { StatusCodes } from 'http-status-codes'
+import {
+    getTables,
+    getTableStateById,
+    setupTables,
+    updateTableState,
+} from 'src/services'
 
 const tableRouter = Router()
 
 tableRouter.get('/', (req: Request, res: Response) => {
-    res.send('table: [GET] /')
+    const data = getTables()
+    res.status(StatusCodes.OK).json(data)
 })
 
 tableRouter.get('/:id', (req: Request, res: Response) => {
-    res.send('table: [GET] /')
+    const { id } = req.params
+    const data = getTableStateById(id)
+    if (data) {
+        res.status(StatusCodes.OK).json({ [id]: data })
+    } else {
+        res.status(StatusCodes.NOT_FOUND).send()
+    }
 })
 
 tableRouter.post('/', (req: Request, res: Response) => {
-    res.send('table: [POST] /')
-})
+    const count = Number(req?.body?.tablesCount)
 
-tableRouter.put('/', (req: Request, res: Response) => {
-    res.send('table: [PUT] /')
+    if (Number.isNaN(count) || count < 1) {
+        res.status(StatusCodes.BAD_REQUEST).json({
+            error: 'Invalid tables count, please set value between 1 and 100',
+        })
+    }
+
+    setupTables(count)
+    res.status(StatusCodes.CREATED).send()
 })
 
 tableRouter.patch('/', (req: Request, res: Response) => {
-    res.send('table: [PATCH] /')
-})
+    const id = Number(req?.body?.id)
+    const newState = req?.body?.state
+    const currentData = getTables()
 
-tableRouter.delete('/', (req: Request, res: Response) => {
-    res.send('table: [DELETE] /')
+    if (Number.isNaN(id) || !id || id < 0 || id < currentData?.tablesCount) {
+        res.status(StatusCodes.BAD_REQUEST).json({
+            error: 'Invalid table id',
+        })
+    }
+
+    updateTableState(id, newState)
+    res.status(StatusCodes.OK).send()
 })
 
 export default tableRouter

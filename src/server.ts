@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import helmet from 'helmet'
 import limit from 'express-rate-limit'
+import bodyParser from 'body-parser'
 
 import { logger } from 'src/logger'
 import { TServer } from 'src/types/server.types'
@@ -18,6 +19,7 @@ export const startServer = ({ port, corsOptions }: TServer) => {
     server.use(cors(corsOptions || {}))
     server.disable('x-powered-by')
     server.use(limit({ windowMs: LIMITER_TIME, max: LIMITER_MAX }))
+    server.use(bodyParser.json())
     server.use(mainRouter)
 
     logger.info(`Server will be started at port ${port}`)

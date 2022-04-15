@@ -18,7 +18,7 @@ menuRouter.patch('/', (req: Request, res: Response) => {
     res.send('menu: [PATCH] /')
 })
 
-menuRouter.delete('/', (req: Request, res: Response) => {
+menuRouter.delete('/:id', (req: Request, res: Response) => {
     res.send('menu: [DELETE] /')
 })
 
