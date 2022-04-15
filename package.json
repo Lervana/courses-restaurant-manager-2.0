@@ -46,12 +46,14 @@
     ]
   },
   "dependencies": {
+    "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-rate-limit": "^6.3.0",
     "helmet": "^5.0.2",
+    "http-status-codes": "^2.2.0",
     "lodash": "^4.17.21",
     "winston": "^3.6.0",
     "winston-daily-rotate-file": "^4.6.1"

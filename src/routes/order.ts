@@ -14,7 +14,7 @@ orderRouter.post('/', (req: Request, res: Response) => {
     res.send('order: [POST] /')
 })
 
-orderRouter.delete('/', (req: Request, res: Response) => {
+orderRouter.delete('/:id', (req: Request, res: Response) => {
     res.send('order: [DELETE] /')
 })
 
