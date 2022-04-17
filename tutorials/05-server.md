@@ -55,7 +55,7 @@ Server will be build on Express.js [https://www.npmjs.com/package/express]
 
 
 7. Change code inside _index.ts_ to use config instead of predefined port number.
-   ```js src/index.ts
+   ```ts src/index.ts
    // src/index.ts
    
    import { logger } from 'src/logger'
@@ -74,7 +74,7 @@ Server will be build on Express.js [https://www.npmjs.com/package/express]
    - Add middlewares: _cors_, _helmet_, _express-rate-limit_.
    - Update _index.ts_ and _config.ts_.
 
-   ```js src/types/server.types.ts
+   ```ts src/types/server.types.ts
    // src/types/server.types.ts
    
    import { CorsOptions } from 'cors'
@@ -85,7 +85,7 @@ Server will be build on Express.js [https://www.npmjs.com/package/express]
    }
    ```
 
-   ```js src/types/config.types.ts
+   ```ts src/types/config.types.ts
    // src/types/config.types.ts
    
    import { CorsOptions } from 'cors'
@@ -140,7 +140,7 @@ Server will be build on Express.js [https://www.npmjs.com/package/express]
    export default config
    ```
    
-   ```js server.ts
+   ```ts server.ts
    // server.ts
    import express from 'express'
    import cors from 'cors'
@@ -171,7 +171,7 @@ Server will be build on Express.js [https://www.npmjs.com/package/express]
    }
    ```
    
-   ```js index.ts
+   ```ts index.ts
    // index.ts
    
    import { logger } from 'src/logger'

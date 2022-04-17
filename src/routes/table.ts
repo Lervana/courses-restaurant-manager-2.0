@@ -17,10 +17,11 @@ tableRouter.get('/', (req: Request, res: Response) => {
 tableRouter.get('/:id', (req: Request, res: Response) => {
     const { id } = req.params
     const data = getTableStateById(id)
-    if (data) {
-        res.status(StatusCodes.OK).json({ [id]: data })
-    } else {
+
+    if (data === undefined || data === null) {
         res.status(StatusCodes.NOT_FOUND).send()
+    } else {
+        res.status(StatusCodes.OK).json({ [id]: data })
     }
 })
 
@@ -31,10 +32,10 @@ tableRouter.post('/', (req: Request, res: Response) => {
         res.status(StatusCodes.BAD_REQUEST).json({
             error: 'Invalid tables count, please set value between 1 and 100',
         })
+    } else {
+        setupTables(count)
+        res.status(StatusCodes.CREATED).send()
     }
-
-    setupTables(count)
-    res.status(StatusCodes.CREATED).send()
 })
 
 tableRouter.patch('/', (req: Request, res: Response) => {
@@ -42,7 +43,7 @@ tableRouter.patch('/', (req: Request, res: Response) => {
     const newState = req?.body?.state
     const currentData = getTables()
 
-    if (Number.isNaN(id) || !id || id < 0 || id < currentData?.tablesCount) {
+    if (Number.isNaN(id) || !id || id < 0 || id > currentData?.tablesCount) {
         res.status(StatusCodes.BAD_REQUEST).json({
             error: 'Invalid table id',
         })

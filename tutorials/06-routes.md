@@ -5,7 +5,7 @@
 2. Add index.ts that wil contain main router: `touch src/routes/index.ts`
 
 3. Add main router implementation into index.ts:
-    ```js src/routes/index.ts
+    ```ts src/routes/index.ts
     import { Router } from 'express'
 
     const mainRouter = Router()
@@ -14,7 +14,7 @@
    ```
    
 4. Use main router inside server.ts:
-    ```js src/server.ts
+    ```ts src/server.ts
    //...
    import mainRouter from 'src/routes'
     //...
