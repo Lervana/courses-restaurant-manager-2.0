@@ -1,7 +1,10 @@
-import { writeFile, readFileContent } from 'src/services/utils.service'
-import path from 'path'
+import {
+    writeFile,
+    readFileContent,
+    getDataPath,
+} from 'src/services/utils.service'
 
-const TABLES_FILE_PATH = path.join(__dirname, '../data/tables.json')
+const TABLES_FILE_PATH = getDataPath('tables.json')
 
 type TTable = {
     tablesCount: number
@@ -9,8 +12,6 @@ type TTable = {
 }
 
 export const setupTables = (tablesCount: number) => {
-    console.log(tablesCount)
-
     const newTablesData: TTable = {
         tablesCount,
         freeTables: {},
@@ -35,7 +36,8 @@ export const getTableStateById = (id: string): boolean => {
 
 export const updateTableState = (id: number, state: boolean) => {
     const data = getTables()
-    if (id > data?.tablesCount || id < 1 || data?.freeTables[id]) return false
+
+    if (id > data?.tablesCount || id < 1 || !data?.freeTables[id]) return false
 
     data.freeTables[id] = state
     writeFile(TABLES_FILE_PATH, data)

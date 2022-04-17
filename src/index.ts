@@ -1,8 +1,7 @@
-import { logger } from 'src/logger'
 import { startServer } from 'src/server'
 import config from 'src/config'
 
-logger.info('Hello info!')
+console.log('Env: ' + config.env)
 
 startServer({
     port: config.options.port,

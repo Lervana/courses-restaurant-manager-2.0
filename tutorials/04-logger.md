@@ -61,7 +61,7 @@ values from .env file. Then assign port value to config param.
    touch src/types/config.types.ts
    ```
    
-   ```js src/types/config.types.ts
+   ```ts src/types/config.types.ts
    // src/types/config.types.ts
    
    export type TEnv = 'production' | 'test' | 'development'
@@ -77,7 +77,7 @@ values from .env file. Then assign port value to config param.
    }
    ```
 
-   ```js src/config.ts
+   ```ts src/config.ts
    // src/config.ts - example structure
    
    import _ from 'lodash'
@@ -111,7 +111,7 @@ values from .env file. Then assign port value to config param.
     npm install winston winston-daily-rotate-file
     ```
 
-    ```js src/logger.ts
+    ```ts src/logger.ts
     // src/logger.ts
     // Example logger - please create logger that meets your requirements
     // In this example winston and winston-daily-rotate-file packages will be used
@@ -163,7 +163,7 @@ values from .env file. Then assign port value to config param.
     export const logger = getLogger(config.options.logLevel, config.options.silentLogs)
     ```
    
-   ```js src/types/config.types.ts
+   ```ts src/types/config.types.ts
    // src/types/config.types.ts
    
    export type TEnv = 'production' | 'test' | 'development'
@@ -182,7 +182,7 @@ values from .env file. Then assign port value to config param.
    }
    ```
    
-   ```js src/config.ts
+   ```ts src/config.ts
    // src/config.ts
    // When using logger there is a need to set some logger options, this may be done inside config file. 
    // Example of required changes:
@@ -214,7 +214,7 @@ values from .env file. Then assign port value to config param.
    ```
 
 8. Let's test our logger, we need to add logger into _index.ts_ file:
-   ```js index.ts
+   ```ts index.ts
    // index.ts
    
    import { logger } from 'src/logger'

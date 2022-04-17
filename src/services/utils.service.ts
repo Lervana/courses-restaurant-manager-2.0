@@ -1,5 +1,6 @@
 import path from 'path'
 import { existsSync, readFileSync, writeFileSync } from 'fs'
+import config from 'src/config'
 
 export const readFile = (path: string) => readFileSync(path, 'utf-8')
 
@@ -31,4 +32,12 @@ export const readJsonFileContent = <T>(filePath: string): T => {
 
 export const writeFile = (filePath: string, data: object): void => {
     return writeFileSync(filePath, JSON.stringify(data, null, 4))
+}
+
+export const getDataPath = (fileName: string) => {
+    return path.join(
+        __dirname,
+        config.isTest ? '../data/test' : '../data/prod',
+        fileName,
+    )
 }

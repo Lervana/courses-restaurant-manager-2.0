@@ -31,5 +31,7 @@ _**Base app that should be extended by requirements! All instructions are writte
 | 03   | Dev environment       | [03-dev-environment.md](tutorials/03-dev-environment.md)    |
 | 04   | Config and logger     | [04-logger.md](tutorials/04-logger.md)                      |
 | 05   | Server                | [05-server.md](tutorials/05-server.md)                      |
-| 07   | Base routes           | [06-routes.md](tutorials/06-server.md)                      |
+| 06   | Base routes           | [06-routes.md](tutorials/06-routes.md)                      |
+| 07   | Tables routes         | [07-tables-routes.md](tutorials/07-tables-routes.md)        |
+| 08   | Tests                 | [08-tests.md](tutorials/08-tests.md)                        |
 
