@@ -1,0 +1,18 @@
+{
+    "createDate": "2022-04-17T23:05:54.850Z",
+    "lastUpdateDate": "2022-04-18T00:49:54.680Z",
+    "items": [
+        {
+            "id": "6d3868ff-ac21-4d83-aed1-12aa6cd993ea",
+            "category": "Nibbles",
+            "name": "Spring rolls",
+            "price": 15
+        },
+        {
+            "id": "946bf629-a6e1-4207-b69f-cd34a9a2794e",
+            "category": "Nibbles",
+            "name": "Prawns in tempura",
+            "price": 30
+        }
+    ]
+}
