@@ -34,4 +34,5 @@ _**Base app that should be extended by requirements! All instructions are writte
 | 06   | Base routes           | [06-routes.md](tutorials/06-routes.md)                      |
 | 07   | Tables routes         | [07-tables-routes.md](tutorials/07-tables-routes.md)        |
 | 08   | Tests                 | [08-tests.md](tutorials/08-tests.md)                        |
+| 09   | Functional app        | [09-functional-app.md](tutorials/09-functional-app.md)      |
 
